@@ -1,0 +1,58 @@
+-- ============================================================
+-- SETUP: Criação e carga do dataset de vendas
+-- Execute este script ANTES das consultas.sql
+-- Compatível com: SQL Server | PostgreSQL | MySQL
+-- ============================================================
+
+-- Criar banco de dados (opcional)
+-- CREATE DATABASE sql_vendas;
+-- USE sql_vendas;
+
+DROP TABLE IF EXISTS vendas;
+
+CREATE TABLE vendas (
+    id_venda       INT PRIMARY KEY,
+    data_venda     DATE NOT NULL,
+    cliente        VARCHAR(100),
+    produto        VARCHAR(100),
+    categoria      VARCHAR(50),
+    quantidade     INT,
+    preco_unitario DECIMAL(10,2),
+    regiao         CHAR(2),
+    status         VARCHAR(20)
+);
+
+INSERT INTO vendas VALUES
+(1,  '2024-01-05', 'Ana Souza',       'Notebook Dell',     'Eletrônicos',    1, 3200.00, 'SP', 'Concluída'),
+(2,  '2024-01-07', 'Carlos Lima',     'Mouse Logitech',    'Periféricos',    2,  150.00, 'RJ', 'Concluída'),
+(3,  '2024-01-10', 'Beatriz Costa',   'Teclado Mecânico',  'Periféricos',    1,  380.00, 'MG', 'Concluída'),
+(4,  '2024-01-12', 'Diego Alves',     'Monitor LG 27"',    'Eletrônicos',    1, 1800.00, 'SP', 'Concluída'),
+(5,  '2024-01-15', 'Elena Ferreira',  'Headset Gamer',     'Periféricos',    3,  250.00, 'RS', 'Cancelada'),
+(6,  '2024-01-18', 'Fábio Gomes',     'SSD 1TB',           'Armazenamento',  2,  420.00, 'BA', 'Concluída'),
+(7,  '2024-01-20', 'Gabriela Nunes',  'Webcam HD',         'Periféricos',    1,  320.00, 'SP', 'Concluída'),
+(8,  '2024-01-22', 'Henrique Pinto',  'Notebook Lenovo',   'Eletrônicos',    1, 2900.00, 'CE', 'Concluída'),
+(9,  '2024-01-25', 'Isabela Rocha',   'HD Externo 2TB',    'Armazenamento',  1,  550.00, 'PR', 'Pendente'),
+(10, '2024-01-28', 'João Martins',    'Impressora HP',     'Outros',         1,  890.00, 'SP', 'Concluída'),
+(11, '2024-02-02', 'Ana Souza',       'Mouse Logitech',    'Periféricos',    1,  150.00, 'SP', 'Concluída'),
+(12, '2024-02-05', 'Carlos Lima',     'Notebook Dell',     'Eletrônicos',    1, 3200.00, 'RJ', 'Cancelada'),
+(13, '2024-02-08', 'Kleber Santos',   'SSD 512GB',         'Armazenamento',  3,  280.00, 'GO', 'Concluída'),
+(14, '2024-02-11', 'Laura Mendes',    'Monitor Samsung',   'Eletrônicos',    2, 1500.00, 'SP', 'Concluída'),
+(15, '2024-02-14', 'Marcos Oliveira', 'Teclado Sem Fio',   'Periféricos',    1,  220.00, 'AM', 'Concluída'),
+(16, '2024-02-17', 'Natália Cruz',    'Webcam 4K',         'Periféricos',    1,  680.00, 'SP', 'Concluída'),
+(17, '2024-02-20', 'Otávio Lima',     'Notebook Acer',     'Eletrônicos',    1, 2600.00, 'MG', 'Concluída'),
+(18, '2024-02-23', 'Paula Vieira',    'HD Externo 1TB',    'Armazenamento',  2,  380.00, 'RJ', 'Concluída'),
+(19, '2024-02-26', 'Rafael Barbosa',  'Headset Sony',      'Periféricos',    1,  450.00, 'SP', 'Concluída'),
+(20, '2024-02-28', 'Sônia Campos',    'Impressora Epson',  'Outros',         1, 1200.00, 'PR', 'Pendente'),
+(21, '2024-03-03', 'Tiago Freitas',   'Notebook Dell',     'Eletrônicos',    2, 3200.00, 'SP', 'Concluída'),
+(22, '2024-03-06', 'Uma Cardoso',     'Mouse Sem Fio',     'Periféricos',    4,  120.00, 'BA', 'Concluída'),
+(23, '2024-03-09', 'Victor Dias',     'SSD 2TB',           'Armazenamento',  1,  780.00, 'SP', 'Concluída'),
+(24, '2024-03-12', 'Wendy Lopes',     'Teclado Mecânico',  'Periféricos',    2,  380.00, 'RJ', 'Concluída'),
+(25, '2024-03-15', 'Xande Moura',     'Monitor LG 24"',    'Eletrônicos',    3, 1200.00, 'MG', 'Concluída'),
+(26, '2024-03-18', 'Yasmin Pires',    'Notebook HP',       'Eletrônicos',    1, 3500.00, 'SP', 'Concluída'),
+(27, '2024-03-21', 'Zara Fonseca',    'HD Externo 4TB',    'Armazenamento',  1,  950.00, 'GO', 'Cancelada'),
+(28, '2024-03-24', 'Ana Souza',       'Headset Gamer',     'Periféricos',    1,  250.00, 'SP', 'Concluída'),
+(29, '2024-03-27', 'Carlos Lima',     'Webcam HD',         'Periféricos',    2,  320.00, 'RJ', 'Concluída'),
+(30, '2024-03-30', 'Beatriz Costa',   'Monitor Samsung',   'Eletrônicos',    1, 1500.00, 'MG', 'Concluída');
+
+-- Verificar carga
+SELECT COUNT(*) AS registros_inseridos FROM vendas;
