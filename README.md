@@ -1,10 +1,9 @@
-# 📊 SQL Consultas Básicas — Dataset de Vendas
+# 📊 Dataset de Vendas
 
 ![SQL](https://img.shields.io/badge/SQL-Server-blue?style=flat-square&logo=microsoftsqlserver)
 ![Status](https://img.shields.io/badge/status-concluído-brightgreen?style=flat-square)
 ![Nível](https://img.shields.io/badge/nível-iniciante-yellow?style=flat-square)
 
-> Projeto **Dia 1** da série [28 dias de Dados no GitHub](https://github.com/MileneCaldeira).  
 > Demonstração prática dos fundamentos de SQL com um dataset real de vendas de e-commerce.
 
 ---
